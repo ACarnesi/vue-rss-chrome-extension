@@ -1,14 +1,12 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Feeds</router-link> |
-    <router-link to="/settings">Settings</router-link>
-  </div>
+  <nav-menu/>
   <router-view/>
 </template>
 
 <style>
 body {
   background-color: #111111;
+  margin: 8px 0;
 }
 
 /* width */
@@ -39,13 +37,13 @@ body {
   text-align: center;
   color: #6894c0;
   max-height: 480px;
-  max-width: 320px;
+  min-width: 320px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 #nav {
-  padding: 30px;
+  padding: 5px;
 }
 
 #nav a {
@@ -57,3 +55,13 @@ body {
   color: #42b983;
 }
 </style>
+
+<script>
+import NavMenu from './components/NavMenu.vue';
+
+export default {
+  components: {
+    NavMenu
+  }
+}
+</script>

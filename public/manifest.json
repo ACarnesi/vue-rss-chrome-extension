@@ -1,0 +1,29 @@
+{
+  "name": "Vue Chrome Playground Extension",
+  "version": "1.0",
+  "description": "Build an Chrome RSS Extension using Vue.js!",
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "activeTab",
+    "alarms",
+    "http://*/*",
+    "https://*/*",
+    "management"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://localhost/*"
+    ]
+  },
+  "manifest_version": 2
+}
