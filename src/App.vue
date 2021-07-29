@@ -36,8 +36,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #6894c0;
-  max-height: 480px;
   min-width: 320px;
+  max-width: 320px;
+  max-height: 480px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
