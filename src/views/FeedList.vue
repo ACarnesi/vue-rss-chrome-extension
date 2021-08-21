@@ -1,14 +1,27 @@
 <template>
   <div class="feed-list">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <nav-menu :navLinks="navLinks"/>
+    <img alt="Vue logo" src="src/assets/logo.png">
   </div>
 </template>
 
 <script>
+import NavMenu from '../components/NavMenu.vue';
 
 export default {
   name: 'FeedList',
   components: {
+    NavMenu
+  },
+  computed: {
+    navLinks() {
+      return {
+        rightNav: [
+          { to: "/settings", title: "Settings", icon: 'cogs'},
+          { to: "/newFeed", title: "New Feed", icon: 'plus-circle'}
+        ]
+      }
+    }
   }
 }
 </script>

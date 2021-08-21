@@ -1,16 +1,22 @@
 <template>
   <div id="nav">
-    <div id="center-nav">
-      <router-link to="/">Feeds</router-link> |
-      <router-link to="/settings">Settings</router-link>
-    </div>
     <div id="left-nav">
-      <router-link to="/"><font-awesome-icon icon="user-secret" /></router-link> |
-      <router-link to="/settings">Settings</router-link>
+      <router-link v-for="navLink in navLinks.leftNav" 
+        :key="navLink.title" 
+        :to="navLink.to" 
+        :title="navLink.title"><font-awesome-icon :icon="navLink.icon" /></router-link>
+    </div>
+    <div id="center-nav">
+      <router-link v-for="navLink in navLinks.centerNav" 
+        :key="navLink.title" 
+        :to="navLink.to" 
+        :title="navLink.title"><font-awesome-icon :icon="navLink.icon" /></router-link>
     </div>
     <div id="right-nav">
-      <router-link to="/">Feeds</router-link> |
-      <router-link to="/settings">Settings</router-link>
+      <router-link v-for="navLink in navLinks.rightNav" 
+        :key="navLink.title" 
+        :to="navLink.to" 
+        :title="navLink.title"><font-awesome-icon :icon="navLink.icon" /></router-link>
     </div>
   </div>
 </template>
@@ -26,8 +32,7 @@
 export default {
   name: 'NavMenu',
   props: {
-    msg: String
-    
+    navLinks: Object
   },
 }
 </script>

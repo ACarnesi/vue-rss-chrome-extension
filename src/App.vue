@@ -1,5 +1,4 @@
 <template>
-  <nav-menu/>
   <router-view/>
 </template>
 
@@ -58,11 +57,12 @@ body {
 </style>
 
 <script>
-import NavMenu from './components/NavMenu.vue';
 
 export default {
   components: {
-    NavMenu
+  },
+  created(){
+    this.$router.push('popup');
   }
 }
 </script>
