@@ -18,7 +18,8 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
+    clean: true,
   },
   optimization: {
     minimize: true
@@ -46,7 +47,15 @@ const config = {
       //     'vue-style-loader',
       //     'css-loader'
       //   ]
-      // }
+      // },
+      {
+        test: /\.(png|jpg|gif|svg|ico)$/,
+
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]?emitFile=false"
+        }
+      }
     ]
   },
   resolve: {

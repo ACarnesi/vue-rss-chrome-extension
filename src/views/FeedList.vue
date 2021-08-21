@@ -1,7 +1,7 @@
 <template>
   <div class="feed-list">
     <nav-menu :navLinks="navLinks"/>
-    <img alt="Vue logo" src="src/assets/logo.png">
+    <img alt="Vue logo" src="../assets/logo.png">
   </div>
 </template>
 
@@ -22,6 +22,9 @@ export default {
         ]
       }
     }
+  },
+  created() {
+    
   }
 }
 </script>
