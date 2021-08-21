@@ -37,6 +37,7 @@ body {
   color: #6894c0;
   min-width: 320px;
   max-width: 320px;
+  min-height: 160px;
   max-height: 480px;
   overflow-y: scroll;
   overflow-x: hidden;
