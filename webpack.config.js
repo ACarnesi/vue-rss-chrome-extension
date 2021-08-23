@@ -28,6 +28,7 @@ const config = {
     static: {
       directory: path.join(__dirname, 'public'),
     },
+    open: ['/popup.html'],
     compress: true,
     port: 9000,
   },
