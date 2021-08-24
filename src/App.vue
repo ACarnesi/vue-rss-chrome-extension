@@ -63,7 +63,7 @@ export default {
   components: {
   },
   created(){
-    this.$router.push('popup');
+    this.$router.push('/'); 
   }
 }
 </script>

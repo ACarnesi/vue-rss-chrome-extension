@@ -18,6 +18,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: "/",
     filename: '[name].js',
     clean: true,
   },
@@ -28,7 +29,8 @@ const config = {
     static: {
       directory: path.join(__dirname, 'public'),
     },
-    open: ['/popup.html'],
+    historyApiFallback: true,
+    open: ['/'],
     compress: true,
     port: 9000,
   },
@@ -74,8 +76,8 @@ const config = {
       patterns: [
         // { from: "icons", to: "icons", ignore: ["icon.xcf"] },
         {
-          from: "./public/popup.html",
-          to: "popup.html",
+          from: "./public/index.html",
+          to: "index.html",
           transform: transformHtml
         },
         {

@@ -1,7 +1,7 @@
 <template>
   <div class="settings">
     <nav-menu :navLinks="navLinks"/>
-    <h1>This is the settings page.</h1>
+    <h1>Add or edit feeds here.</h1>
   </div>
 </template>
 
