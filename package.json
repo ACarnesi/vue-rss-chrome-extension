@@ -8,7 +8,7 @@
     "build-zip": "node scripts/build-zip.js",
     "watch": "npm run build -- --watch",
     "watch:dev": "cross-env HMR=true npm run build:dev -- --watch",
-    "serve:dev": "cross-env NODE_ENV=development webpack serve"
+    "serve": "cross-env NODE_ENV=development webpack serve"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
